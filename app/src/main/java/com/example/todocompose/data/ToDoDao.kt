@@ -1,9 +1,6 @@
 package com.example.todocompose.data
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.todocompose.data.models.ToDoTask
 import kotlinx.coroutines.flow.Flow
 
@@ -19,4 +16,7 @@ interface ToDoDao {
 
   @Insert(onConflict = OnConflictStrategy.IGNORE)
   suspend fun addTask(toDoTask: ToDoTask)
+
+  @Update
+  suspend fun updateTask(toDoTask: ToDoTask)
 }
