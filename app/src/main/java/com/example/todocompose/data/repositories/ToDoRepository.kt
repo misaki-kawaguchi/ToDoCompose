@@ -14,4 +14,8 @@ class ToDoRepository @Inject constructor(private val toDoDao: ToDoDao) {
   fun getSelectedTask(taskId: Int): Flow<ToDoTask> {
     return toDoDao.getSelectedTask(taskId = taskId)
   }
+
+  suspend fun addTask(toDoTask: ToDoTask) {
+    toDoDao.addTask(toDoTask = toDoTask)
+  }
 }
