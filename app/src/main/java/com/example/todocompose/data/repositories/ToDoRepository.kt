@@ -9,4 +9,5 @@ class ToDoRepository @Inject constructor(private val toDoDao: ToDoDao) {
 
   val getAllTasks: Flow<List<ToDoTask>> = toDoDao.getAllTasks()
   val sortByLowPriority: Flow<List<ToDoTask>> = toDoDao.sortByLowPriority()
+  val sortByHighPriority: Flow<List<ToDoTask>> = toDoDao.sortByHighPriority()
 }
