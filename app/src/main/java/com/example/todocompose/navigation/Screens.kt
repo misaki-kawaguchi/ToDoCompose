@@ -10,4 +10,8 @@ class Screens(navController: NavHostController) {
       popUpTo(LIST_SCREEN) { inclusive = true }
     }
   }
+
+  val task: (Int) -> Unit = { taskId ->
+    navController.navigate(route = "task/$taskId")
+  }
 }
