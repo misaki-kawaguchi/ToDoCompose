@@ -1,4 +1,6 @@
 package com.example.todocompose.navigation
 
-class Screens {
+import androidx.navigation.NavHostController
+
+class Screens(navController: NavHostController) {
 }
