@@ -3,6 +3,8 @@ package com.example.todocompose.ui.screens.list
 import androidx.compose.runtime.Composable
 
 @Composable
-fun ListScreen() {
+fun ListScreen(
+  navigateToTaskScreen: (Int) -> Unit,
+) {
 
 }
