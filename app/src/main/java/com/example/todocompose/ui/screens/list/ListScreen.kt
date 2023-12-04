@@ -17,7 +17,7 @@ import com.example.todocompose.ui.theme.fabBackgroundColor
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun ListScreen(
-  navigateToTaskScreen: (Int) -> Unit,
+  navigateToTaskScreen: (taskId: Int) -> Unit,
 ) {
   Scaffold(
     topBar = {
@@ -32,7 +32,7 @@ fun ListScreen(
 
 @Composable
 fun ListFab(
-  OnFabClicked: (Int) -> Unit,
+  OnFabClicked: (taskId: Int) -> Unit,
 ) {
   FloatingActionButton(
     onClick = {
