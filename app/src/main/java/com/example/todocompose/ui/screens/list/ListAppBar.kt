@@ -4,9 +4,11 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.todocompose.ui.theme.topAppBackgroundColor
 import com.example.todocompose.ui.theme.topAppBarContentColor
+import com.example.todocompose.R
 
 @Composable
 fun ListAppBar() {
@@ -47,7 +49,7 @@ fun SearchAction(
   IconButton(onClick = { onSearchClicked() }) {
     Icon(
       imageVector = Icons.Filled.Search,
-      contentDescription = "Search tasks",
+      contentDescription = stringResource(id = R.string.search_action),
       tint = MaterialTheme.colors.topAppBarContentColor
     )
   }
