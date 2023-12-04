@@ -9,6 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.todocompose.ui.theme.topAppBackgroundColor
 import com.example.todocompose.ui.theme.topAppBarContentColor
 import com.example.todocompose.R
+import com.example.todocompose.data.models.Priority
 
 @Composable
 fun ListAppBar() {
@@ -53,6 +54,13 @@ fun SearchAction(
       tint = MaterialTheme.colors.topAppBarContentColor
     )
   }
+}
+
+@Composable
+fun SortAction(
+  onSortClicked: (Priority) -> Unit,
+) {
+
 }
 
 @Composable
